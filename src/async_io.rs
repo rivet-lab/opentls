@@ -250,6 +250,14 @@ mod connect {
             self
         }
 
+        /// Controls the use of built-in system certificates during certificate validation.
+        ///
+        /// Defaults to `false` -- built-in system certs will be used.
+        pub fn disable_built_in_roots(mut self, disable: bool) -> Self {
+            self.builder.disable_built_in_roots(disable);
+            self
+        }
+
         /// Controls the use of certificate validation.
         ///
         /// Defaults to false.
